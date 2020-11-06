@@ -4,9 +4,9 @@
 
 ### setup
 
-- Ping if module is up 
+> Ping if module is up 
 
-> AT
+**AT**
 ```
 OK
 ```
