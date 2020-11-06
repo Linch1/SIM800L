@@ -4,11 +4,9 @@
 
 ### setup
 
-> Ping if module is up 
-
-| Description  | Command       | Response      |
-|------------- | ------------- | ------------- |
-| Content Cell | Content Cell  | Content Cell  |
-| Content Cell | Content Cell  | Content Cell  |
+| Description                 | Command                        | Response                       |
+|-------------                | -------------                  | -------------                  |
+| Ping if module is up        | AT                  | OK                   |
+| Content Cell                | Content Cell                   | Content Cell                   |
 
 - check if sim is blocked byu pin *
