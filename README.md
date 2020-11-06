@@ -6,7 +6,7 @@
 
 - Ping if module is up 
 
-> __AT__
+> AT
 ```
 OK
 ```
