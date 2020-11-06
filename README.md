@@ -5,6 +5,7 @@
 # setup
 
 - Ping if module is up 
+
 *AT*
 _OK_
 
