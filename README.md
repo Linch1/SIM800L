@@ -31,6 +31,20 @@ A list of At commands usefull for the sim800L module ( Arduino/Raspberry )
 | Set the number to which send the sms (ZZ is the region num prefix )   | AT+CMGS="+ZZxxxxxxxxxx" |
 | Type the message and press Ctrl-Z when done               |   | +CMGS: 2 \n OK|
 
+### SENDING HTTP REQUEST
+
+| Description                 | Command                        | Response                       |
+|-------------                | -------------                  | -------------                  |
+| Start wireless connection with the GPRS       | AT+CIICR                  |       	OK        |
+| Gets the SIM IP address                 | AT+CIFSR                    |   100.73.110.9               |
+| Starts an TCP connection to the website on port 80               | AT+CIPSTART="TCP","exploreembedded.com",80                  | OK
+CONNECT OK      |
+| Indicates that we will be making a HTTP request whose length is 63 characters   | AT+CIPSEND=63 | |
+| Make a HTTP GET request.               | GET exploreembedded.com/wiki/images/1/15/Hello.txt HTTP/1.0  | SEND OK
+HTTP/1.0 200 OK|
+
+
+
 ### ENABLING GSM LOCATION ( not work more correctly right now Nov 2020 )
 
 | Description                 | Command                        | Response                       |
