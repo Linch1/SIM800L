@@ -5,8 +5,8 @@
 # setup
 
 - Ping if module is up 
-```
 *AT*
-_OK_
+```
+OK
 ```
 - check if sim is blocked byu pin *
