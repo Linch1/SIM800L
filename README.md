@@ -40,8 +40,7 @@ A list of At commands usefull for the sim800L module ( Arduino/Raspberry )
 | Starts an TCP connection to the website on port 80               | AT+CIPSTART="TCP","exploreembedded.com",80                  | OK
 CONNECT OK      |
 | Indicates that we will be making a HTTP request whose length is 63 characters   | AT+CIPSEND=63 | |
-| Make a HTTP GET request.               | GET exploreembedded.com/wiki/images/1/15/Hello.txt HTTP/1.0  | SEND OK
-HTTP/1.0 200 OK|
+| Make a HTTP GET request.               | GET exploreembedded.com/wiki/images/1/15/Hello.txt HTTP/1.0  | SEND OK HTTP/1.0 200 OK|
 
 
 
