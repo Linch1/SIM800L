@@ -1,6 +1,6 @@
 # AT COMMANDS
 
-- Getting network signal quality *AT+CSQ*
+A list of At commands usefull for the sim800L module ( Arduino/Raspberry )
 
 ### SETUP
 
