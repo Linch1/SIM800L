@@ -6,9 +6,9 @@
 
 > Ping if module is up 
 
-**AT**
-```
-OK
-```
+| Description  | Command       | Response      |
+|------------- | ------------- | ------------- |
+| Content Cell | Content Cell  | Content Cell  |
+| Content Cell | Content Cell  | Content Cell  |
 
 - check if sim is blocked byu pin *
