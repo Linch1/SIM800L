@@ -36,7 +36,7 @@ A list of At commands usefull for the sim800L module ( Arduino/Raspberry )
 |-------------                | -------------                  | -------------                  |
 | Enabling HTTP mode       |  AT+HTTPINIT                 |       	OK        |
 |  If you are using or SLL set                 | AT+HTTPSSL=1                   |   OK              |
-| Setting HTTP bearer profile               | AT+HTTPPARA="CID",1                  |  CONNECT OK      |
+| Setting HTTP bearer profile               | AT+HTTPPARA="CID",1                  |   OK      |
 | Start HTTP GET Session    | AT+HTTPACTION=0 | +HTTPACTION: 0,200,84 |
 | Read the content of webpage  | AT+HTTPREAD |  +HTTPREAD: 84 Congratulation! your SIM800L http Request Test has been successfull!!! -miliohm.com- |
 | Terminate the session   | AT+HTTPTERM |    |
