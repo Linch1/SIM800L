@@ -12,7 +12,6 @@ A list of At commands usefull for the sim800L module ( Arduino/Raspberry )
 | Check signal strenght                | AT+CSQ                   | num in range of 0 - 31 ( 31 is the best )                 |
 | Read sim informations                | AT+CCID                  | 8939103320004650065f ( similar ) |
 | Check if is registered to the network                | AT+CREG?                   | +CREG: 0,1 |
-| Check signal strenght                | AT+CSQ                   | num in range of 0 - 31 ( 31 is the best )                 |
 | to attach GPRS        | AT+CGATT =1                  |               |
 | enable the GMS location                 | AT+SAPBR=3,1,"CONTYPE","GPRS"                    |                  |
 | Check if sim is blocked                | AT+SAPBR=3,1,"APN","{here goes your APN}"                   | |
