@@ -34,12 +34,13 @@ A list of At commands usefull for the sim800L module ( Arduino/Raspberry )
 
 | Description                 | Command                        | Response                       |
 |-------------                | -------------                  | -------------                  |
-| Start wireless connection with the GPRS       | AT+CIICR                  |       	OK        |
-| Gets the SIM IP address                 | AT+CIFSR                    |   100.73.110.9               |
-| Starts an TCP connection to the website on port 80               | AT+CIPSTART="TCP","exploreembedded.com",80                  | OK
+| Enabling HTTP mode       |  AT+HTTPINIT                 |       	OK        |
+|  If you are using or SLL set                 | AT+HTTPSSL=1                   |   100.73.110.9               |
+| Setting HTTP bearer profile               | AT+HTTPPARA="CID",1                  | OK
 CONNECT OK      |
-| Indicates that we will be making a HTTP request whose length is 63 characters   | AT+CIPSEND=63 | |
-| Make a HTTP GET request.               | GET exploreembedded.com/wiki/images/1/15/Hello.txt HTTP/1.0  | SEND OK HTTP/1.0 200 OK|
+| Start HTTP GET Session    | AT+HTTPACTION=0 | +HTTPACTION: 0,200,84 |
+| Read the content of webpage  | AT+HTTPREAD |  +HTTPREAD: 84 Congratulation! your SIM800L http Request Test has been successfull!!! -miliohm.com- |
+| Terminate the session   | AT+HTTPTERM |    |
 
 ### GET THE SIM OPERATOR
 
