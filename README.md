@@ -30,7 +30,7 @@ A list of At commands usefull for the sim800L module ( Arduino/Raspberry )
 | Set the number to which send the sms (ZZ is the region num prefix )   | AT+CMGS="+ZZxxxxxxxxxx" |
 | Type the message and press Ctrl-Z when done               |   | +CMGS: 2 \n OK|
 
-### SENDING HTTP REQUEST
+### SENDING HTTP GET REQUEST
 
 | Description                 | Command                        | Response                       |
 |-------------                | -------------                  | -------------                  |
