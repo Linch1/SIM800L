@@ -20,6 +20,13 @@ A list of At commands usefull for the sim800L module ( Arduino/Raspberry )
 | Allow freelly comunication with the GSM network    | AT+SAPBR=1,1                   |  |
 | Get you sim ip add            | AT+SAPBR=2,1                  |  |
 
+### GET THE SIM OPERATOR
+
+| Description                 | Command                        | Response                       |
+|-------------                | -------------                  | -------------                  |
+|        | AT+COPS=3,0                  |       	OK        |
+|                 | AT+COPS?                    |   +COPS: 0,0,"vodafone"              |
+
 ### SENDING SMS 
 
 | Description                 | Command                        | Response                       |
@@ -41,12 +48,6 @@ A list of At commands usefull for the sim800L module ( Arduino/Raspberry )
 | Read the content of webpage  | AT+HTTPREAD |  +HTTPREAD: 84 Congratulation! your SIM800L http Request Test has been successfull!!! -miliohm.com- |
 | Terminate the session   | AT+HTTPTERM |    |
 
-### GET THE SIM OPERATOR
-
-| Description                 | Command                        | Response                       |
-|-------------                | -------------                  | -------------                  |
-|        | AT+COPS=3,0                  |       	OK        |
-|                 | AT+COPS?                    |   +COPS: 0,0,"vodafone"              |
 
 ### ENABLING GSM LOCATION ( not work more correctly right now Nov 2020 )
 
