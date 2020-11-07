@@ -41,7 +41,12 @@ CONNECT OK      |
 | Indicates that we will be making a HTTP request whose length is 63 characters   | AT+CIPSEND=63 | |
 | Make a HTTP GET request.               | GET exploreembedded.com/wiki/images/1/15/Hello.txt HTTP/1.0  | SEND OK HTTP/1.0 200 OK|
 
+### GET THE SIM OPERATOR
 
+| Description                 | Command                        | Response                       |
+|-------------                | -------------                  | -------------                  |
+|        | AT+COPS=3,0                  |       	OK        |
+|                 | AT+COPS?                    |   +COPS: 0,0,"vodafone"              |
 
 ### ENABLING GSM LOCATION ( not work more correctly right now Nov 2020 )
 
