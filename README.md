@@ -9,6 +9,8 @@ A list of At commands usefull for the sim800L module ( Arduino/Raspberry )
 
 ### SETUP
 
+- `sudo minicom -b 115000 -o -D /dev/serial0` ( *Open the editor for the serial comunication with the SIM800L where you can type the commands* )
+
 | Description                 | Command                        | Response                       |
 |-------------                | -------------                  | -------------                  |
 | Ping if module is up        | AT                  | OK                   |
