@@ -5,7 +5,7 @@ A list of At commands usefull for the sim800L module ( Arduino/Raspberry )
 ## Index
 
 - common AT commands
-- Use SIM800L as main internet source for RPI ( source (https://www.rhydolabz.com/wiki/?p=16325#comment-57356)[https://www.rhydolabz.com/wiki/?p=16325#comment-57356]
+- Use SIM800L as main internet source for RPI ( source [https://www.rhydolabz.com/wiki/?p=16325#comment-57356](https://www.rhydolabz.com/wiki/?p=16325#comment-57356))
 
 ### SETUP
 
