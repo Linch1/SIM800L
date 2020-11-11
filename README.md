@@ -69,7 +69,7 @@ THis guide will help you creating a PPP connection thourgh your SIM800 module. P
 - `sudo apt-get install ppp screen elinks`
 - `sudo nano 	/etc/ppp/peers/rnet`
 
-- paste in the fil the following lines
+- paste in the fil the following lines. You have to edit the serial port and the apn ( line 4 and line 5 )
 ```
 #imis/internet is the apn for idea connection
 connect "/usr/sbin/chat -v -f /etc/chatscripts/gprs -T { YOUR APN }"
@@ -101,15 +101,14 @@ nocrtscts
 # No modem control lines with GSM Modem
 local
 ```
-Where you have to edit the serial port and the apn ( line 4 and line 5 )
 
-- `sudo nano /etc/chatscripts/gprs`
-a file now should be open on the terminal, If the SIM card needs a PIN to unlock, uncomment the line AT+CPIN=1234
+- `sudo nano /etc/chatscripts/gprs` ( *a file now should be open on the terminal, If the SIM card needs a PIN to unlock, uncomment the line AT+CPIN=1234* )
 
-- `sudo pon rnet` ( run the script for create the PPP connection ) 
-- `cat /var/log/syslog | grep pppd` ( print the logs ) 
-- `ifconfig` ( now you should se a ppp0 line )
-- `sudo poff rnet` ( shut down the PPP connection )
+
+- `sudo pon rnet` ( *run the script for create the PPP connection* ) 
+- `cat /var/log/syslog | grep pppd` ( *print the logs* ) 
+- `ifconfig` ( *now you should se a ppp0 line* )
+- `sudo poff rnet` ( *shut down the PPP connection* )
 
 
 
