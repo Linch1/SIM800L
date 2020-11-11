@@ -2,7 +2,7 @@
 
 A list of At commands usefull for the sim800L module ( Arduino/Raspberry )
 
-## Index
+## INDEX
 
 - common AT commands
 - Use SIM800L as main internet source for RPI ( source [https://www.rhydolabz.com/wiki/?p=16325#comment-57356](https://www.rhydolabz.com/wiki/?p=16325#comment-57356))
@@ -59,4 +59,57 @@ A list of At commands usefull for the sim800L module ( Arduino/Raspberry )
 | Description                 | Command                        | Response                       |
 |-------------                | -------------                  | -------------                  |
 | Request sim location           | AT+CIPGSMLOC=1,1               |  |
+
+
+### USE SIM800 AS MAIN INTERNET SOURCE
+
+THis guide will help you creating a PPP connection thourgh your SIM800 module. PPP or Point to Point Protocol establishes a Node to Node communication using serial interface.
+
+- `sudo apt-get update`
+- `sudo apt-get install ppp screen elinks`
+- `sudo nano 	/etc/ppp/peers/rnet`
+
+- paste in the fil the following lines
+```
+#imis/internet is the apn for idea connection
+connect "/usr/sbin/chat -v -f /etc/chatscripts/gprs -T { YOUR APN }"
+ 
+# For Raspberry Pi3 use /dev/ttyS0 as the communication port:
+/dev/ttyS0 { <--- REPLACE WITH SIM800L SERIAL PORT } 
+ 
+# Baudrate
+115200
+ 
+# Assumes that your IP address is allocated dynamically by the ISP.
+noipdefault
+ 
+# Try to get the name server addresses from the ISP.
+usepeerdns
+ 
+# Use this connection as the default route to the internet.
+defaultroute
+ 
+# Makes PPPD "dial again" when the connection is lost.
+persist
+ 
+# Do not ask the remote to authenticate.
+noauth
+ 
+# No hardware flow control on the serial link with GSM Modem
+nocrtscts
+ 
+# No modem control lines with GSM Modem
+local
+```
+Where you have to edit the serial port and the apn ( line 4 and line 5 )
+
+- `sudo nano /etc/chatscripts/gprs`
+a file now should be open on the terminal, If the SIM card needs a PIN to unlock, uncomment the line AT+CPIN=1234
+
+- `sudo pon rnet` ( run the script for create the PPP connection ) 
+- `cat /var/log/syslog | grep pppd` ( print the logs ) 
+- `ifconfig` ( now you should se a ppp0 line )
+- `sudo poff rnet` ( shut down the PPP connection )
+
+
 
