@@ -49,6 +49,9 @@ A list of At commands usefull for the sim800L module ( Arduino/Raspberry )
 | Description                 | Command                        | Response                       |
 |-------------                | -------------                  | -------------                  |
 | set the speaker volume (0-100)       | AT+CLVL=80                 |       	OK        |
+| Start a call (change ZZ with country code and xxxxxxxxxxx with phone number to dial)      | ATD+ +ZZxxxxxxxxxx;                |       	OK        |
+| Answer incoming call       | ATA               |       	OK        |
+| End a call       | ATH                |       	OK        |
 
 ### SENDING HTTP GET REQUEST
 
