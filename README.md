@@ -31,8 +31,17 @@ A list of At commands usefull for the sim800L module ( Arduino/Raspberry )
 
 | Description                 | Command                        | Response                       |
 |-------------                | -------------                  | -------------                  |
-|  flight mode      | AT+CFUN=0                  |       	OK        |
+|  flight mode      | AT+CSCLK=1                  |       	OK        |
 |  nomral mode               | AT+CFUN=1                    |   OK              |
+
+### SIM SLEEP MODES
+
+| Description                 | Command                        | Response                       |
+|-------------                | -------------                  | -------------                  |
+|  default power consump. mode      | AT+CSCLK=0                |       	OK        |
+|  normal sleep mode      | AT+CSCLK=1                  |       	OK        |
+|  stronger sleep mode               | AT+CSCLK=2                    |   OK              |
+|  additional resources               | (sleep mode)[http://www.raviyp.com/sim900-sim800-sleep-mode-at-commands/]                    |   OK              |
 
 ### GET THE SIM OPERATOR
 
