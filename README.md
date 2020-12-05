@@ -27,6 +27,13 @@ A list of At commands usefull for the sim800L module ( Arduino/Raspberry )
 | Allow freelly comunication with the GSM network    | AT+SAPBR=1,1                   |  |
 | Get you sim ip add            | AT+SAPBR=2,1                  |  |
 
+### SIM NETWORK MODES
+
+| Description                 | Command                        | Response                       |
+|-------------                | -------------                  | -------------                  |
+|  flight mode      | AT+CFUN=0                  |       	OK        |
+|  nomral mode               | AT+CFUN=1                    |   OK              |
+
 ### GET THE SIM OPERATOR
 
 | Description                 | Command                        | Response                       |
